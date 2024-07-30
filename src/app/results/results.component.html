@@ -1,5 +1,11 @@
 <h2 class="mb-5">Resultados</h2>
 
+<div class="text-end">
+  <button class="btn btn-primary" routerLink="/new">
+    Nuevo Registro
+  </button>
+</div>
+
 <table class="table table-hover">
   <thead>
   <th>ID</th>
@@ -9,11 +15,9 @@
   <tbody>
     @for (result of results; track result.id) {
       <tr>
-        <th>{{result.id}}</th>
-        <th>{{result.email}}</th>
-        <th>{{result.musicStyle}}</th>
-
-
+        <th>{{ result.id }}</th>
+        <th>{{ result.email }}</th>
+        <th>{{ result.musicStyle }}</th>
       </tr>
     }
 
