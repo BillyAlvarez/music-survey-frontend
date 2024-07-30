@@ -2,16 +2,17 @@
 
 
 <div class="row row-cols-3 justify-content-center">
-  <form>
+  <form [formGroup]="form" (ngSubmit)="create()">
     <div class="mb-3">
       <label for="email">Email</label>
-      <input id="email" type="email" placeholder="Email" class="form-control">
+      <input id="email" type="email" placeholder="Email" class="form-control"
+      formControlName="email">
 
     </div>
 
     <div class="mb-3">
       <label for="estilo">Estilo Musical</label>
-      <input id="estilo" type="text" placeholder="Estilo Musical" class="form-control">
+      <input id="estilo" type="text" placeholder="Estilo Musical" class="form-control" formControlName="musicStyle">
 
     </div>
 
