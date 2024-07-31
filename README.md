@@ -1,27 +1,55 @@
 # MusicSurvey
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2.
+MusicSurvey es una aplicación de encuesta sobre estilos musicales desarrollada con Angular y Spring Boot. Permite a los usuarios votar por su estilo musical favorito y ver los resultados en un gráfico de pastel.
 
-## Development server
+Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) versión 18.1.2 y utiliza Spring Boot para el backend.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Despliegue
 
-## Code scaffolding
+Para desplegar la aplicación en un entorno local o en un servidor, sigue estos pasos:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Backend (Spring Boot)
 
-## Build
+1. **Configura el Backend**:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Asegúrate de que Java JDK 21 esté instalado.
+- Navega al directorio del backend: `cd music-survey`
+- Ejecuta el comando Maven para construir y ejecutar el backend: `mvn spring-boot:run`
+- El backend estará disponible en `http://localhost:8088`.
 
-## Running unit tests
+2. **Configura la Base de Datos**:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- La aplicación usa una base de datos en memoria H2. Asegúrate de que la configuración en `application.properties` esté correcta para tu entorno.
 
-## Running end-to-end tests
+### Frontend (Angular)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. **Instala las Dependencias**:
 
-## Further help
+- Navega al directorio del frontend: `cd frontend`
+- Instala las dependencias necesarias: `npm install`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+2. **Configura el Proxy** (si es necesario):
+
+- Asegúrate de que el archivo `proxy.conf.json` esté configurado correctamente para redirigir las solicitudes API al backend.
+
+3. **Ejecuta el Servidor de Desarrollo**:
+
+- Inicia el servidor de desarrollo con: `ng serve`
+- La aplicación estará disponible en `http://localhost:4200`.
+
+## Uso de la Aplicación
+
+- **Encuesta**: Navega a `/survey` para acceder al formulario de encuesta donde puedes ingresar tu correo electrónico y seleccionar tu estilo musical favorito.
+- **Resultados**: Navega a `/results` para ver los resultados de la encuesta en una tabla y un gráfico de pastel.
+
+
+### 1. Clonar el Repositorio backend
+
+
+git clone https://github.com/tu-usuario/music-survey.git 
+
+### 2. Clonar el Repositorio frontend
+
+git clone https://github.com/BillyAlvarez/music-survey-frontend.git
+
+
