@@ -1,24 +1,28 @@
-<h2 class="mb-5">Resultados de la encuesta</h2>
+<div class="container mt-5">
+  <h2 class="mb-5 text-center text-primary">Resultados de la encuesta</h2>
 
-<div class="text-end mb-3">
-  <button class="btn btn-primary" routerLink="/new">
-    Nueva Encuesta
-  </button>
-  <button class="btn btn-secondary me-2" routerLink="/home">
-    Ir al Home
-  </button>
+  <div class="text-end mb-4">
+    <button class="btn btn-primary me-2" routerLink="/new">
+      Nueva Encuesta
+    </button>
+    <button class="btn btn-secondary" routerLink="/home">
+      Ir al Home
+    </button>
+  </div>
+
+  <!-- Gráfico de pastel -->
+  <div class="chart-container">
+    <ngx-charts-pie-chart
+      (activate)="onActivate($event)"
+      (deactivate)="onDeactivate($event)"
+      (select)="onSelect($event)"
+      [doughnut]="isDoughnut"
+      [gradient]="gradient"
+      [labels]="showLabels"
+      [legend]="showLegend"
+      [results]="single"
+      [scheme]="'cool'"
+      [view]="view">
+    </ngx-charts-pie-chart>
+  </div>
 </div>
-
-<!-- Gráfico de pastel -->
-<ngx-charts-pie-chart
-  (activate)="onActivate($event)"
-  (deactivate)="onDeactivate($event)"
-  (select)="onSelect($event)"
-  [doughnut]="isDoughnut"
-  [gradient]="gradient"
-  [labels]="showLabels"
-  [legend]="showLegend"
-  [results]="single"
-  [scheme]="'cool'"
-  [view]="view">
-</ngx-charts-pie-chart>
