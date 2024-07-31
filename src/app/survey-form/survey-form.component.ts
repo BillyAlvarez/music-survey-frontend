@@ -22,6 +22,9 @@ export default class SurveyFormComponent {
   });
 
   create() {
+    if (this.form.invalid) {
+      return;
+    }
     const body = this.form.value;
     this.surveysService.create(body)
       .subscribe(() => {
