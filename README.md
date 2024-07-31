@@ -38,13 +38,12 @@ Para desplegar la aplicación en un entorno local o en un servidor, sigue estos 
 - La aplicación estará disponible en `http://localhost:4200`.
 
 ## Uso de la Aplicación
-
-- **Encuesta**: Navega a `/survey` para acceder al formulario de encuesta donde puedes ingresar tu correo electrónico y seleccionar tu estilo musical favorito.
+- **Encuesta**: Navega a `/home` para acceder al inicio encuesta donde puedes seleccionar ir a encuesta o ir a resultados.
+- **Encuesta**: Navega a `/new` para acceder al formulario de encuesta donde puedes ingresar tu correo electrónico y seleccionar tu estilo musical favorito.
 - **Resultados**: Navega a `/results` para ver los resultados de la encuesta en una tabla y un gráfico de pastel.
 
 
 ### 1. Clonar el Repositorio backend
-
 
 git clone https://github.com/tu-usuario/music-survey.git 
 
