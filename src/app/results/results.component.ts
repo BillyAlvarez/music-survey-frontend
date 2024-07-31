@@ -1,9 +1,9 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { SurveysService } from '../services/surveys.service';
-import { RouterModule } from '@angular/router';
-import { Result } from '../model/result.interface';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { firstValueFrom } from 'rxjs';
+import {Component, inject, OnInit} from '@angular/core';
+import {SurveysService} from '../services/surveys.service';
+import {RouterModule} from '@angular/router';
+import {Result} from '../model/result.interface';
+import {NgxChartsModule} from '@swimlane/ngx-charts';
+import {firstValueFrom} from 'rxjs';
 
 @Component({
   selector: 'app-results',

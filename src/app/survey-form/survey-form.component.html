@@ -1,15 +1,15 @@
 <h2 class="mb-5">Encuesta</h2>
 
 <div class="row row-cols-3 justify-content-center">
-  <form [formGroup]="form" (ngSubmit)="create()">
+  <form (ngSubmit)="create()" [formGroup]="form">
     <div class="mb-3">
       <label for="email">Email</label>
-      <input id="email" type="email" placeholder="Email" class="form-control" formControlName="email">
+      <input class="form-control" formControlName="email" id="email" placeholder="Email" type="email">
     </div>
 
     <div class="mb-3">
       <label for="musicStyle">Estilo Musical</label>
-      <select id="musicStyle" class="form-control" formControlName="musicStyle">
+      <select class="form-control" formControlName="musicStyle" id="musicStyle">
         <option value="">Seleccione un estilo musical</option>
         <option value="Rock">Rock</option>
         <option value="Pop">Pop</option>
@@ -21,10 +21,10 @@
     </div>
 
     <div class="text-end">
-      <button type="button" class="btn btn-light ms-2" routerLink="/home">
+      <button class="btn btn-light ms-2" routerLink="/home" type="button">
         Cancelar
       </button>
-      <button type="submit" class="btn btn-primary ms-2">
+      <button class="btn btn-primary ms-2" type="submit">
         Guardar Preferencia
       </button>
     </div>

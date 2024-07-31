@@ -9,12 +9,12 @@ export class SurveysService {
 
   private http = inject(HttpClient);
 
-  list(){
+  list() {
     return this.http.get<Result[]>('http://localhost:8088/api/survey')
   }
 
-  create(body: any){
-    return this.http.post<Result>('http://localhost:8088/api/survey', body )
+  create(body: any) {
+    return this.http.post<Result>('http://localhost:8088/api/survey', body)
   }
 
 }
