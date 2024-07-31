@@ -18,7 +18,7 @@ private router = inject(Router);
 private surveysService = inject(SurveysService);
 
 form = this.fb.group({
-  email: ['', [Validators.required]],
+  email: ['', [Validators.required, Validators.email]],
   musicStyle: ['', [Validators.required]]
 });
 
