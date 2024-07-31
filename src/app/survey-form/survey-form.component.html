@@ -5,6 +5,11 @@
     <div class="mb-3">
       <label for="email">Email</label>
       <input class="form-control" formControlName="email" id="email" placeholder="Email" type="email">
+      <div *ngIf="form.controls.email.invalid && (form.controls.email.dirty || !form.controls.email.untouched)"
+           class="text-danger">
+        <div *ngIf="form.controls.email.errors">Email es requerido.</div>
+        <div *ngIf="form.controls.email.errors">Formato de email inválido.</div>
+      </div>
     </div>
 
     <div class="mb-3">
@@ -18,15 +23,29 @@
         <option value="Rap">Rap</option>
         <option value="Salsa">Salsa</option>
       </select>
+      <div
+        *ngIf="form.controls.musicStyle.invalid && (form.controls.musicStyle.dirty || !form.controls.musicStyle.untouched)"
+        class="text-danger">
+        <div *ngIf="form.controls.musicStyle.errors">Seleccione un estilo musical.</div>
+      </div>
     </div>
 
     <div class="text-end">
       <button class="btn btn-light ms-2" routerLink="/home" type="button">
         Cancelar
       </button>
-      <button class="btn btn-primary ms-2" type="submit">
+      <button [disabled]="form.invalid" class="btn btn-primary ms-2" type="submit">
         Guardar Preferencia
       </button>
     </div>
+
+    <div *ngIf="successMessage" class="alert alert-success mt-3" role="alert">
+      {{ successMessage }}
+    </div>
+
+    <div *ngIf="errorMessage" class="alert alert-danger mt-3" role="alert">
+      {{ errorMessage }}
+    </div>
+
   </form>
 </div>
