@@ -2,6 +2,7 @@ import {Component, inject, OnInit} from '@angular/core';
 import {SurveysService} from "../services/surveys.service";
 import {log} from "@angular-devkit/build-angular/src/builders/ssr-dev-server";
 import {RouterModule} from "@angular/router";
+import {Result} from "../model/result.interface";
 
 @Component({
   selector: 'app-results',
@@ -13,11 +14,11 @@ import {RouterModule} from "@angular/router";
 export default class ResultsComponent  implements OnInit{
 private surveysService = inject(SurveysService);
 
-results : any[] = []
+results : Result[] = []
 
 ngOnInit(): void {
   this.surveysService.list()
-    .subscribe((results: any) => { this.results = results});
+    .subscribe(results => { this.results = results});
 }
 
 }

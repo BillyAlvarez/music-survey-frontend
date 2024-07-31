@@ -26,7 +26,7 @@ create(){
   const body = this.form.value;
   this.surveysService.create(body)
     .subscribe(() => {
-this.router.navigate(['/']).then(r => {});
+this.router.navigate(['/home']).then(r => {});
     });
 }
 
